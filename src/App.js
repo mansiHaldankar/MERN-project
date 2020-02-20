@@ -8,19 +8,23 @@ import { BrowserRouter as Router ,
 
 import  User from './user/pages/User';
 import NewPlaces from './places/pages/NewPlaces';
+import MainNavigation from './shared/components/Navigation/MainNavigation/MainNavigation';
 
 const App = () => {
   return (
     <Router>
-      <Switch>
-        <Route path = '/' exact>
-          <User />
-        </Route>
-        <Route path = '/places/new' exact>
-          <NewPlaces />
-        </Route>
-        <Redirect to = '/'></Redirect>
-      </Switch>
+      <MainNavigation />
+        <main>  
+          <Switch>
+            <Route path = '/' exact>
+              <User />
+            </Route>
+            <Route path = '/places/new' exact>
+              <NewPlaces />
+            </Route>
+            <Redirect to = '/'></Redirect>
+          </Switch>
+        </main>
     </Router>
   );
 }

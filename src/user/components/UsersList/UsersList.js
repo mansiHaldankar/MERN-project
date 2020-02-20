@@ -8,7 +8,7 @@ const UsersList = (props) => {
             return <h1> No Item Found </h1>
         }
         return(  
-            <ul>
+            <ul className = 'users-list'>
                 {
                     props.items.map((user) => {
                         return(
